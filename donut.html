@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/vaxel/5/edit
+-->
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <button id="charles">the great show</button>
+<script>
+var height =461;
+var width =393;
+var time = 1000;
+var paper = Raphael(50,50,height,width);
+var louis=[];
+var new_width=[];
+var new_height=[];
+var numofsquare= 180;
+
+for (var henry=0; henry<numofsquare; henry++){
+  var imageurl= "http://sweetclipart.com/multisite/sweetclipart/files/donut_strawberry_sprinkles.png";
+  louis[henry] = paper.image(imageurl, 50,50,50,50);}
+
+function jazz(){
+  for (var stephen=0; stephen<numofsquare; stephen++){
+  new_height[stephen]= Math.random()*height;
+  new_width[stephen]= Math.random()*width;
+  }
+  for (var bobis=0; bobis<numofsquare-1; bobis++){
+     louis[bobis].animate({x:new_height[bobis], y:new_width[bobis]}, time);
+  }
+ louis[numofsquare-1].animate({x:new_height[numofsquare-1], y:new_width[numofsquare-1]}, time, jazz);
+}
+
+$("#charles").click(jazz);
+</script>
+</body>
+</html>
